@@ -19,11 +19,11 @@ class ProfileUpload_TestCase(unittest.TestCase):
 
     def test(self):
         # Menjalankan serangkaian pengujian
-        self.login_correct_credentials()
+        self.login_correct()
         self.go_to_profile_page()
         self.upload_profile_picture()
 
-    def login_correct_credentials(self):
+    def login_correct(self):
         # Pengujian login dengan kredensial yang benar
         login_url = self.url + '/login.php'
         self.browser.get(login_url)
