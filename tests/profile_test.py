@@ -3,7 +3,7 @@ import unittest, os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class ProfileUpload_TestCase(unittest.TestCase):
+class ProfilePictureUpload_TestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
