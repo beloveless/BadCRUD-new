@@ -27,5 +27,3 @@ FORM-based-auth	LOGIN_URL	http://localhost/BadCRUD-main/login.php	POST	username=
 # Navigate to the page after successful login
 # Replace the following URL with the actual URL you want to navigate to
 INCLUDE		navigate,^http://localhost/BadCRUD-main/index.php$
-
-# You can add additional rules based on your application's specific navigation patterns
