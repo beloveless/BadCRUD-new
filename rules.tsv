@@ -1,0 +1,31 @@
+# rules.tsv for XSS detection after successful login
+
+# Enable active scan
+ACTIVE_SCAN	true
+
+# Set attack strength to Medium (you can adjust it as needed)
+ATTACK_STRENGTH	Medium
+
+# Set alert threshold to Medium (you can adjust it as needed)
+ALERT_THRESHOLD	Medium
+
+# Exclude URLs that you don't want to scan
+EXCLUDE_URLS	/excluded-page,/admin/*
+
+# Enable or disable specific scanners
+SCANNER_ENABLED	CookieScanner	true
+SCANNER_ENABLED	XSSPlugin	true
+SCANNER_ENABLED	SQLInjection	true
+
+# Include or adjust the following rules for your specific case
+
+# Log in to the application
+# Replace the following values with your actual login credentials and login URL
+INCLUDE		auth,^http://localhost/BadCRUD-main/login.php$
+FORM-based-auth	LOGIN_URL	http://localhost/BadCRUD-main/login.php	POST	username=admin&password=nimda666!&submit=Login
+
+# Navigate to the page after successful login
+# Replace the following URL with the actual URL you want to navigate to
+INCLUDE		navigate,^http://localhost/BadCRUD-main/index.php$
+
+# You can add additional rules based on your application's specific navigation patterns
