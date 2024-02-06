@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class LoginCorrectCredentialsTestCase(unittest.TestCase):
+class LoginCorrect_TestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
