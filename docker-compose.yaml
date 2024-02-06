@@ -5,6 +5,8 @@ services:
     container_name: docker-apache
     ports:
       - "80:80"
+    networks:
+      - my-network
 
   mysql:
     image: mysql:latest
@@ -16,7 +18,8 @@ services:
       - "3306:3306"
     volumes:
       - ./db/badcrud.sql:/docker-entrypoint-initdb.d/badcrud.sql:ro
-
+    networks:
+      - my-network
 
   zap:
     image: owasp/zap2docker-weekly
@@ -27,9 +30,8 @@ services:
     depends_on:
       - docker-apache
     networks:
-      - default
+      - my-network
 
 networks:
-  default:
-    external:
-      name: bridge
+  my-network:
+    driver: bridge
