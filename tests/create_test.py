@@ -26,7 +26,7 @@ class CreateContactTestCase(unittest.TestCase):
         self.search_contact()
         self.delete_contact()
 
-    def login_correct_credentials(self):
+    def login_correct(self):
         login_url = self.url + '/login.php'
         self.browser.get(login_url)
         self.browser.find_element(By.ID, 'inputUsername').send_keys('admin')
