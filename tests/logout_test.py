@@ -18,7 +18,7 @@ class Logout_TestCase(unittest.TestCase):
 
     def test(self):
         # Menjalankan serangkaian pengujian
-        self.login_correct_credentials()
+        self.login_correct()
         self.index_page()
         self.logout()
 

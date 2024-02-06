@@ -10,7 +10,7 @@ class LoginCorrect_TestCase(unittest.TestCase):
         option.add_argument('--headless')
         cls.browser = webdriver.Firefox(options=option)
 
-    def test_1_login_correct_credentials(self):
+    def test_1_login_correct(self):
         login_url = 'http://localhost/login.php'
         self.browser.get(login_url)
         self.browser.find_element(By.ID, 'inputUsername').send_keys('admin')

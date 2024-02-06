@@ -18,10 +18,10 @@ class XSS_TestCase(unittest.TestCase):
 
     def test(self):
         # Menjalankan serangkaian pengujian
-        self.login_correct_credentials()
+        self.login_correct()
         self.xss_page()
 
-    def login_correct_credentials(self):
+    def login_correct(self):
         # Pengujian login dengan kredensial yang benar
         login_url = self.url + '/login.php'
         self.browser.get(login_url)
