@@ -22,7 +22,7 @@ class Logout_TestCase(unittest.TestCase):
         self.index_page()
         self.logout()
 
-    def login_correct_credentials(self):
+    def login_correct(self):
         # Pengujian login dengan kredensial yang benar
         login_url = self.url + '/login.php'
         self.browser.get(login_url)
