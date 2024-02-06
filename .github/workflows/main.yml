@@ -62,7 +62,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'ghcr.io/zaproxy/zaproxy:stable'
-          target: 'http://localhost/BadCRUD-main/login.php'
+          target: 'http://localhost/login.php'
           rules_file_name: './rules.tsv'
-          cmd_options: '-a -J "-config rules.active=true -config rules.url="http://localhost/BadCRUD-main/login.php" -config rules.ignoredurl="" -config rules.include.allchildren=false"'
+          cmd_options: '-a -J "-config rules.active=true -config rules.url="./login.php" -config rules.ignoredurl="" -config rules.include.allchildren=false"'
 
