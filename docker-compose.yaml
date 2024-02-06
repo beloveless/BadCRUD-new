@@ -24,7 +24,7 @@ services:
   zap:
     image: owasp/zap2docker-weekly
     container_name: zap-container
-    command: ["zap.sh", "-daemon", "-port", "8090", "-host", "0.0.0.0", "-config", "api.disablekey=true", "-ajaxSpider", "-scan", "-recursive", "-spider", "1", "-url", "http://localhost/BadCRUD-main/login.php"]
+    command: ["zap.sh", "-daemon", "-port", "8090", "-host", "0.0.0.0", "-config", "api.disablekey=true", "-ajaxSpider", "-scan", "-recursive", "-spider", "1", "-url", "${{ env.URL }} + '/index.php'"]
     ports:
       - "8090:8090"
     depends_on:

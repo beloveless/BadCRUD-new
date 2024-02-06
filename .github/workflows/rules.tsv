@@ -21,9 +21,9 @@ SCANNER_ENABLED	SQLInjection	true
 
 # Log in to the application
 # Replace the following values with your actual login credentials and login URL
-INCLUDE		auth,^${{ env.URL }}$
-FORM-based-auth	LOGIN_URL	${{ env.URL }}	POST	username=admin&password=nimda666!&submit=Login
+INCLUDE		auth,^${{ env.URL }} + '/login.php'$
+FORM-based-auth	LOGIN_URL	${{ env.URL }} + '/login.php'	POST	username=admin&password=nimda666!&submit=Login
 
 # Navigate to the page after successful login
 # Replace the following URL with the actual URL you want to navigate to
-INCLUDE		navigate,^http://localhost/index.php$
+INCLUDE		navigate,^${{ env.URL }} + '/index.php'$
